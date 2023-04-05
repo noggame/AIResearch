@@ -34,11 +34,11 @@
 
 ### Music
 
-1. [Amper Music] (https://www.audoir.com/ampermusic) : 음악 생성 및 지원
-1. [Aiva] (https://www.aiva.ai/) : 감성적인 음악/효과음 생성
-1. [Amadeus Code] (https://amadeuscode.com/app/en#page-block-esxgnavp2gh) : 멜로디 및 작곡
-1. [Google Magenta] (https://magenta.tensorflow.org/) : 음악 생성 및 지원
-1. [MuseNet] (https://openai.com/research/musenet) (OpenAI) : 음악을 이해한다기보다는 화성, 리듬, 스타일 등을 고려해 다음 나올 음(~Token)을 예상하는 방식으로 음악 생성 지원
+1. [Amper Music](https://www.audoir.com/ampermusic) : 음악 생성 및 지원
+1. [Aiva](https://www.aiva.ai/) : 감성적인 음악/효과음 생성
+1. [Amadeus Code](https://amadeuscode.com/app/en#page-block-esxgnavp2gh) : 멜로디 및 작곡
+1. [Google Magenta](https://magenta.tensorflow.org/) : 음악 생성 및 지원
+1. [MuseNet](https://openai.com/research/musenet) (OpenAI) : 음악을 이해한다기보다는 화성, 리듬, 스타일 등을 고려해 다음 나올 음(~Token)을 예상하는 방식으로 음악 생성 지원
 
 
 ### Code
