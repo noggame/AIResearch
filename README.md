@@ -23,6 +23,8 @@
 1. [LaMDA](https://blog.google/technology/ai/lamda/), [Bard](https://bard.google.com/) (Google)
 1. [Chat PDF](https://www.chatpdf.com/) : PDF 대상 질의/검색
 
+- [x] **Generative AI App Builder (Google) 확인 필요**
+
 
 ### Image
 1. [DALL-E](https://openai.com/product/dall-e-2) (OpenAI) : 이미지 생성
