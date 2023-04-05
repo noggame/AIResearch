@@ -23,7 +23,7 @@
 1. [LaMDA](https://blog.google/technology/ai/lamda/), [Bard](https://bard.google.com/) (Google)
 1. [Chat PDF](https://www.chatpdf.com/) : PDF 대상 질의/검색
 
-- [x] **Generative AI App Builder (Google) 확인 필요**
+- [x] **Generative AI App Builder (Google) 조사 필요**
 
 
 ### Image
@@ -47,6 +47,8 @@
 
 1. [CoPilot](https://github.com/features/copilot) (GitHub) : OpenAI Codex를 사용해 코드를 제안
 1. [CodeWhisperer](https://aws.amazon.com/ko/codewhisperer/) (Amazon) : 주석을 기반으로 코드 제안
+
+- [x] **Replit (with Google) : 조사 필요**
 
 
 ### ETC ??
