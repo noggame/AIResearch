@@ -18,22 +18,18 @@
 
 ### Text
 
-1. Google : LaMDA, Bard, T5
-2. Apple : Siri
-3. MicroSoft : Cortana
-4. OpenAI : ChatGPT
-5. Amazon : Alexa
-6. [Chat PDF](https://www.chatpdf.com/)
+1. [LaMDA](https://blog.google/technology/ai/lamda/), [Bard](https://bard.google.com/) (Google)
+2. New Bing (MicroSoft) : 질의/검색 서비스로, 전달 정보에 대한 출처를 명시하는 것이 특징이다.
+3. ChatGPT (OpenAI) : 질의/검색 서비스로, 생성된 답안의 경우 거짓 정보일 수도 있다.
+4. [Chat PDF](https://www.chatpdf.com/) : PDF 대상 질의/검색 서비스
 
 
 ### Image
-
-1. Google : MiP-NeRF
-2. OpenAI : [DALL-E](https://openai.com/product/dall-e-2)
-3. NVIDIA : StyleGAN
-4. Adobe : Sensei
-5. MidJourney
-
+1. [DALL-E](https://openai.com/product/dall-e-2) (OpenAI) : 이미지 생성 서비스
+1. [StyleGAN](https://github.com/NVlabs/stylegan) (NVIDIA) - 얼굴 생성 서비스
+1. Adobe : Sensei
+1. MidJourney
+1. Google(technical) : NeRF, MiP-NeRF
 
 
 ### Music
