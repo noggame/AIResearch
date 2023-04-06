@@ -22,8 +22,7 @@
 1. [New Bing](https://www.bing.com/new) (MicroSoft) : 질의/검색 서비스로, 전달 정보에 대한 출처를 명시하는 것이 특징이다.
 1. [LaMDA](https://blog.google/technology/ai/lamda/), [Bard](https://bard.google.com/) (Google)
 1. [Chat PDF](https://www.chatpdf.com/) : PDF 대상 질의/검색
-
-
+1. [Generative AI App Builder](https://cloud.google.com/blog/products/ai-machine-learning/create-generative-apps-in-minutes-with-gen-app-builder?hl=en) (Google) : 웹URL 또는 PDF 파일을 입력받아 학습 후, 해당 모델을 서비스할 수 있도록 제공 ([관련영상](https://www.youtube.com/watch?v=0vM5UWC5crs))
 
 
 ### Image
@@ -47,6 +46,7 @@
 
 1. [CoPilot](https://github.com/features/copilot) (GitHub) : OpenAI Codex를 사용해 코드를 제안
 1. [CodeWhisperer](https://aws.amazon.com/ko/codewhisperer/) (Amazon) : 주석을 기반으로 코드 제안
+1. [Replit](https://replit.com/) (with Google) : 코드생성 및 Debug 등 개발 관련으로 다양한 정보를 제공하는 AI IDE
 
 
 
@@ -54,11 +54,10 @@
 
 - [StyleGAN](https://github.com/NVlabs/stylegan), [CycleGAN](https://junyanz.github.io/CycleGAN/), [WaveNet](https://www.deepmind.com/blog/wavenet-a-generative-model-for-raw-audio), Neural Style Transfer
 
-
-### 조사필요
-
-- [x] **Generative AI App Builder (Google) 조사 필요**
-- [x] **Replit (with Google) : 조사 필요** : 코드생성 IDE
+### Model
+1. [Alpaca](https://github.com/alpacahq)
+1. [GPT4ALL](https://github.com/nomic-ai/gpt4all?ref=producthunt)
+1. [Vicuna](https://github.com/lm-sys/FastChat)
 
 
 ## 참고 (Reference)
