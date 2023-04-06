@@ -59,6 +59,7 @@
 
 - [x] **Generative AI App Builder (Google) 조사 필요**
 - [x] **Replit (with Google) : 조사 필요**
+- [ ] **zplit** 코드생성 IDE
 
 
 ## 참고 (Reference)
