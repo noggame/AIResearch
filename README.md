@@ -16,6 +16,15 @@
 |장점|명확한 규칙으로 신뢰성 높음|다양하고 예측 불가능한 결과 가능|
 |단점|데이터가 부족하거나 편향 가능성 있음|모델 설명이 어렵고 생성된 데이터의 정확성 보정 필요|
 
+
+## Model
+1. [Alpaca](https://github.com/alpacahq)
+1. [GPT4ALL](https://github.com/nomic-ai/gpt4all?ref=producthunt)
+1. [Vicuna](https://github.com/lm-sys/FastChat)
+
+
+## 적용 예
+
 ### Text
 
 1. [ChatGPT](https://openai.com/blog/chatgpt) (OpenAI) : 질의/검색 서비스로, 생성된 답안의 경우 거짓 정보일 수도 있다.
@@ -53,12 +62,6 @@
 ### ETC ??
 
 - [StyleGAN](https://github.com/NVlabs/stylegan), [CycleGAN](https://junyanz.github.io/CycleGAN/), [WaveNet](https://www.deepmind.com/blog/wavenet-a-generative-model-for-raw-audio), Neural Style Transfer
-
-### Model
-1. [Alpaca](https://github.com/alpacahq)
-1. [GPT4ALL](https://github.com/nomic-ai/gpt4all?ref=producthunt)
-1. [Vicuna](https://github.com/lm-sys/FastChat)
-
 
 ## 참고 (Reference)
 
