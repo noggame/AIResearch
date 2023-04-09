@@ -20,7 +20,7 @@
 ## Model
 1. [Alpaca](https://github.com/alpacahq)
 1. [GPT4ALL](https://github.com/nomic-ai/gpt4all?ref=producthunt)
-1. [Vicuna](https://github.com/lm-sys/FastChat)
+1. [Vicuna](./Model/Vicuna.md)
 
 
 ## 적용 예
