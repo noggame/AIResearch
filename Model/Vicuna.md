@@ -1,4 +1,6 @@
-[original article](https://pub.towardsai.net/meet-vicuna-the-latest-metas-llama-model-that-matches-chatgpt-performance-e23b2fc67e6b)
+
+# [Vicuna]()
+
 
 
 ## 배경
@@ -15,3 +17,8 @@ Vicuna-13B는 ShareGPT.com의 7만건의 공유 대화 데이터를 사용해 fi
 - Cost reduction via Spot Instance : 40배 많은 데이터셋과 4배 긴 문장의 훈련을 위한 비용이 도전 과제였으며, 이를 줄이 위해 SkyPilot으로부터 고용된 팀은 효율대비 싸게 먹히는 지점을 찾는 역할을 수행
 
 ## 평가
+
+123
+
+## Reference
+[article](https://pub.towardsai.net/meet-vicuna-the-latest-metas-llama-model-that-matches-chatgpt-performance-e23b2fc67e6b)
