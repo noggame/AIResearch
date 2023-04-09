@@ -9,6 +9,7 @@ UC Berkeley, CMU, Stanford, UC San Diego 에서 기조 LLMㅇ 존재하는 훈�
 
 
 ## 구조
+
 Vicuna-13B는 ShareGPT.com의 7만건의 공유 대화 데이터를 사용해 fine-tuning을 진행했다.
 > ShareGPT.com : ChatGPT 대화를 사용자들간에 공유하는 사이트
 
@@ -18,7 +19,11 @@ Vicuna-13B는 ShareGPT.com의 7만건의 공유 대화 데이터를 사용해 fi
 
 ## 평가
 
-123
+GPT-4 기반으로 챗봇 성능측정을 자동화학 위한 평가 프레임워크 제안
+
+해당 프레임워크는 총 8개의 카테고리로 구성 (페르미 문제, 역할 시나리오, 코딩/수학 등이 포함)
+
+평가를 윟 카테고리별 10문제씩 선별했으며, 5개의 챗봇으로부터 결과를 수집해 비교 (LLaMA, Alpaca, ChatGPT, Bard, Vicuna)
 
 ## Reference
-[article](https://pub.towardsai.net/meet-vicuna-the-latest-metas-llama-model-that-matches-chatgpt-performance-e23b2fc67e6b)
+- [Article_01](https://pub.towardsai.net/meet-vicuna-the-latest-metas-llama-model-that-matches-chatgpt-performance-e23b2fc67e6b)
