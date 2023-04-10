@@ -1,8 +1,6 @@
 
 # [Vicuna](https://github.com/lm-sys/FastChat)
 
-
-
 ## 배경
 
 UC Berkeley, CMU, Stanford, UC San Diego 에서 기존 LLM에 존재하는 훈련 부족과 구조상 문제를 해결하기 위해 개발되었다.
@@ -40,6 +38,7 @@ GPT-4 기반으로 챗봇 성능측정을 자동화학 위한 평가 프레임�
 ## Reference
 - [Article_01](https://pub.towardsai.net/meet-vicuna-the-latest-metas-llama-model-that-matches-chatgpt-performance-e23b2fc67e6b)
 
+---
 
 # Training
 
@@ -51,6 +50,20 @@ Clone the Repo
 git clone --recurse-submodules https://github.com/nomic-ai/gpt4all.git
 git submodule update --init
 ```
+
+Setup the environment
+
+```
+python -m pip install -r requirements.txt
+
+cd transformers
+pip install -e . 
+
+cd ../peft
+pip install -e .
+```
+###
+
 
 
 모델 및 토크나이저 불러오기 : https://huggingface.co/docs/transformers/quicktour#use-another-model-and-tokenizer-in-the-pipeline
