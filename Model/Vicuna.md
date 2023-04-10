@@ -5,7 +5,7 @@
 
 ## 배경
 
-UC Berkeley, CMU, Stanford, UC San Diego 에서 기조 LLMㅇ 존재하는 훈련 부족와 구조상 문제를 해결하기 위해 개발되었다.
+UC Berkeley, CMU, Stanford, UC San Diego 에서 기존 LLM에 존재하는 훈련 부족과 구조상 문제를 해결하기 위해 개발되었다.
 
 
 ## 구조
@@ -31,6 +31,10 @@ GPT-4 기반으로 챗봇 성능측정을 자동화학 위한 평가 프레임�
 3. 수집된 결과는 '유용함', '관련성', '정확도', '세부성'을 기반으로 GPT-4 에게 팻봇의 성능을 평가하도록 질의
 4. 평가된 점수 및 세부 설명을 참조한 전체 평가
   > 코딩/수학계산 카테고리에 대한 평가 신뢰도는 낮음
+
+### 결과
+
+<img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*qTrWfPbqFB9sijxy.png" width="500">
 
 
 ## Reference
