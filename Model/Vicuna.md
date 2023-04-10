@@ -53,8 +53,9 @@ git submodule update --init
 ```
 
 
-
-LlamaTokenizer
+모델 및 토크나이저 불러오기 : https://huggingface.co/docs/transformers/quicktour#use-another-model-and-tokenizer-in-the-pipeline
+llama-7b-hf 모델명 : https://huggingface.co/decapoda-research/llama-7b-hf
+LlamaTokenizer : https://huggingface.co/docs/transformers/main/en/model_doc/llama 
 
 
 ## Reference
