@@ -44,14 +44,14 @@ GPT-4 기반으로 챗봇 성능측정을 자동화학 위한 평가 프레임�
 
 ## [Setup](https://github.com/nomic-ai/gpt4all#setup)
 
-Clone the Repo
+### Clone the Repo
 
 ```
 git clone --recurse-submodules https://github.com/nomic-ai/gpt4all.git
 git submodule update --init
 ```
 
-Setup the environment
+### Setup the environment
 
 ```
 python -m pip install -r requirements.txt
@@ -62,7 +62,39 @@ pip install -e .
 cd ../peft
 pip install -e .
 ```
-###
+
+### Training
+
+```
+accelerate launch --dynamo_backend=inductor --num_processes=8 --num_machines=1 --machine_rank=0 --deepspeed_multinode_launcher standard --mixed_precision=bf16  --use_deepspeed --deepspeed_config_file=configs/deepspeed/ds_config.json train.py --config configs/train/finetune.yaml
+```
+
+### Generate
+
+```
+python generate.py --config configs/generate/generate.yaml --prompt "Write a script to reverse a string in Python"
+```
+
+## 조건별 코드 수정
+
+<details>
+  <summary>wandb 미사용</summary>
+
+  ```
+  # configs/train/finetune.yaml
+  ...
+  wandb: false
+  ...
+  ```
+</details>
+
+<details>
+  <summary>cpu 사용</summary>
+  ```
+  123
+  ```
+</details>
+
 
 
 
