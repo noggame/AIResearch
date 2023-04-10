@@ -20,7 +20,7 @@
 ## Model
 1. [Alpaca](https://github.com/alpacahq)
 1. [GPT4ALL](https://github.com/nomic-ai/gpt4all?ref=producthunt)
-1. [Vicuna](./Model/Vicuna.md)
+1. [Vicuna 정리](./Model/Vicuna.md)
 
 
 ## 적용 예
@@ -66,4 +66,3 @@
 ## 참고 (Reference)
 
 - [GAN](https://deepai.org/machine-learning-glossary-and-terms/generative-adversarial-network)
-- 
