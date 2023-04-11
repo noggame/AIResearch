@@ -118,6 +118,21 @@ python generate.py --config configs/generate/generate.yaml --prompt "Write a scr
 
 </details>
 
+<details>
+  <summary>ModuleNotFoundError: No module named 'torch._six'</summary>
+  
+  구버전에서 사용되던 모듈로, 신규 모듈로 교체
+  
+  ``` Python
+  
+  # from torch._six import inf
+  from torch import inf   # update
+  
+  ```
+
+</details>
+
+
 ## Reference
 
 - [gpt4all.git](https://github.com/nomic-ai/gpt4all)
