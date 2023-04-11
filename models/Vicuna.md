@@ -10,7 +10,7 @@ UC Berkeley, CMU, Stanford, UC San Diego 에서 기존 LLM에 존재하는 훈�
 
 ## 구조
 
-Vicuna-13B는 ShareGPT.com의 7만건의 공유 대화 데이터를 사용해 fine-tuning을 진행
+Vicuna-13B는 기존 Stanford의 alpaca를 기반으로 ShareGPT.com의 7만건의 공유 대화 데이터를 사용해 fine-tuning을 진행
 > ShareGPT.com : ChatGPT 대화를 사용자들간에 공유하는 사이트
 
 PyTorch FSDP와 A100 GPU 8대를 하루동안 사용해 학습
