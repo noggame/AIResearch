@@ -39,5 +39,5 @@ GPT-4 기반으로 챗봇 성능측정을 자동화학 위한 평가 프레임�
 
 - [Official Blog](https://vicuna.lmsys.org/)
 - [Demo page](https://chat.lmsys.org/)
-- [Paper](https://arxiv.org/abs/2302.11665)
+- [Paper - Serving](https://arxiv.org/abs/2302.11665)
 - [Article_01](https://pub.towardsai.net/meet-vicuna-the-latest-metas-llama-model-that-matches-chatgpt-performance-e23b2fc67e6b)
