@@ -32,8 +32,18 @@ GPT-4 기반으로 챗봇 성능측정을 자동화학 위한 평가 프레임�
 
 ### 결과
 
+그림. GPT-4를 이용한 응답 비교
+
 <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*qTrWfPbqFB9sijxy.png" width="500">
 
+표. GPT-4를 이용한 최종 점수
+
+|Baseline|Baseline Score|Vicuna Score|
+|---|---|---|
+|LLaMA-13B|513.0|694.0|
+|Alpca-13B|583.0|704.0|
+|Bard|664.0|655.5|
+|ChatGPT|693.0|638.0|
 
 ## Reference
 
