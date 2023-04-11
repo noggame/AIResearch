@@ -157,10 +157,6 @@ python generate.py --config configs/generate/generate.yaml --prompt "Write a scr
 
 </details>
 
-
-모델 및 토크나이저 불러오기 : https://huggingface.co/docs/transformers/quicktour#use-another-model-and-tokenizer-in-the-pipeline
-llama-7b-hf 모델명 : https://huggingface.co/decapoda-research/llama-7b-hf
-
-
 ## Reference
+
 - [gpt4all.git](https://github.com/nomic-ai/gpt4all)
