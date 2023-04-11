@@ -107,6 +107,7 @@ python generate.py --config configs/generate/generate.yaml --prompt "Write a scr
   
   ``` INI
   # configs/train/finetune.yaml
+  
   wandb: false
   ```
   
