@@ -80,18 +80,18 @@ python generate.py --config configs/generate/generate.yaml --prompt "Write a scr
 <details>
   <summary>Set Model & Tokenizer </summary>
 
-  ```
+  환경파일 설정
+  
+  ``` INI
   # configs/train/finetune.yaml
 
-  # model/tokenizer
   model_name: "decapoda-research/llama-7b-hf"
   tokenizer_name: "decapoda-research/llama-7b-hf"
-  ...
   ```
   
   [Model & Tokenizer 개체 생성](https://huggingface.co/docs/transformers/quicktour#use-another-model-and-tokenizer-in-the-pipeline)
   
-  ```
+  ``` Python
   from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
   model = AutoModelForSequenceClassification.from_pretrained(model_name)
@@ -103,30 +103,30 @@ python generate.py --config configs/generate/generate.yaml --prompt "Write a scr
 <details>
   <summary>wandb 미사용</summary>
 
-```
-# configs/train/finetune.yaml
-...
-wandb: false
-...
-```
+  환경파일 설정
+  
+  ``` INI
+  # configs/train/finetune.yaml
+  wandb: false
+  ```
   
 </details>
 
 <details>
   <summary>cpu 사용</summary>
   
-``` Python
-# train.py
+  ``` Python
+  # train.py
 
-if __name__ == "__main__":
-  ...
-  if config["wandb"]:
-    ...
-  else:
-    accelerator = Accelerator(cpu=True)
+  if __name__ == "__main__":
+    # ...
+    if config["wandb"]:
+      # ...
+    else:
+      accelerator = Accelerator(cpu=True)
 
-  train(accelerator, config=config)
-```
+    train(accelerator, config=config)
+  ```
   
 </details>
 
@@ -140,8 +140,7 @@ if __name__ == "__main__":
   ``` Python
   # transformers/src/transformers/models/auto/tokenization_auto.py
   # ~line 625
-  ...
-  
+    
         # using "LlamaTokenizer" Not "LLaMATokenizer"
         config_tokenizer_class = "LlamaTokenizer"   ### FIXME: Assign tokenizer directly
   
@@ -152,7 +151,7 @@ if __name__ == "__main__":
                 tokenizer_auto_map = tokenizer_config["auto_map"]
             else:
                 tokenizer_auto_map = tokenizer_config["auto_map"].get("AutoTokenizer", None)
-  ...
+  
   ```
 
 </details>
