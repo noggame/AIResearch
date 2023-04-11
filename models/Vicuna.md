@@ -1,6 +1,8 @@
 
 # [Vicuna](https://github.com/lm-sys/FastChat)
 
+[Web-chat link](https://chat.lmsys.org/)
+
 ## 배경
 
 UC Berkeley, CMU, Stanford, UC San Diego 에서 기존 LLM에 존재하는 훈련 부족과 구조상 문제를 해결하기 위해 개발되었다.
