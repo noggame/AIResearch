@@ -1,8 +1,6 @@
 
 # [Vicuna](https://github.com/lm-sys/FastChat)
 
-[Web-chat link](https://chat.lmsys.org/)
-
 ## 배경
 
 UC Berkeley, CMU, Stanford, UC San Diego 에서 기존 LLM에 존재하는 훈련 부족과 구조상 문제를 해결하기 위해 개발되었다.
@@ -40,4 +38,6 @@ GPT-4 기반으로 챗봇 성능측정을 자동화학 위한 평가 프레임�
 ## Reference
 
 - [Official Blog](https://vicuna.lmsys.org/)
+- [Demo page](https://chat.lmsys.org/)
+- [Paper](https://arxiv.org/abs/2302.11665)
 - [Article_01](https://pub.towardsai.net/meet-vicuna-the-latest-metas-llama-model-that-matches-chatgpt-performance-e23b2fc67e6b)
