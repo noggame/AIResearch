@@ -71,3 +71,4 @@
 ## 참고 (Reference)
 
 - [GAN](https://deepai.org/machine-learning-glossary-and-terms/generative-adversarial-network)
+- [GenerativeAI-Article-01](https://www.altexsoft.com/blog/generative-ai/)
