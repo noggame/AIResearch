@@ -2,8 +2,10 @@
 
 ## Generative AI (생성형 AI)
 
-- 생성형 AI에서 일반적으로 사용하는 방식 중 하나는 GAN(Generative Adversarial Networks)이다.
-> GAN : 새로운 Content를 생성하는 생성 네트워크와 Content를 평가해 진위 여부를 경정하는 판별 네트워크로 구성되며, 두 네트워크는 생성된 Content의 품질 향상을 위해 경쟁한다.
+- 생성형 AI에서는 GAN이나 Transformer 기반 모델이 주로 사용된다.
+> GAN (Generative Adversarial Networks) : 새로운 Content를 생성하는 생성 네트워크와 Content를 평가해 진위 여부를 경정하는 판별 네트워크로 구성되며, 두 네트워크는 생성된 Content의 품질 향상을 위해 경쟁한다.
+
+> Transformer : 문장의 단어오 같은 연속된 데이터간으 관계를 추적해 그 의미를 파악하고 학습한다. (GPT3, LaMDA)
 
 - 기존 AI vs 생성형 AI
 
@@ -18,6 +20,9 @@
 
 
 ## Model
+
+1. GPT-3 : OpenAI 팀에서만든 딥러닝 모델중 하나로, 생성형으로 미리 학습된(pre-trained) Transformer 모델에 대한 표준이다.
+1. LaMDA (Language Model for Dialogue Applications) : Google Transformer에서 만든 대화형 뉴럴 언어 모델이다.
 1. [Alpaca](https://github.com/alpacahq)
 1. [GPT4ALL](https://github.com/nomic-ai/gpt4all?ref=producthunt), [정리](./models/GPT4ALL.md)
 1. [Vicuna 정리](./models/Vicuna.md)
