@@ -24,4 +24,6 @@
 또한 다중의 입력된 데이터를 병렬처리해서 훈련 단계의 속도를 높일 수 있다.
 
 
+# 참고
 
+- [Article-01](https://www.altexsoft.com/blog/generative-ai/)
