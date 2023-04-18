@@ -24,7 +24,7 @@
 1. GPT-3 : OpenAI 팀에서만든 딥러닝 모델중 하나로, 생성형으로 미리 학습된(pre-trained) Transformer 모델에 대한 표준이다.
 1. LaMDA (Language Model for Dialogue Applications) : Google Transformer에서 만든 대화형 뉴럴 언어 모델이다.
 1. [Alpaca](https://github.com/alpacahq)
-1. [GPT4ALL](https://github.com/nomic-ai/gpt4all?ref=producthunt), [정리](./models/GPT4ALL.md)
+1. [GPT4ALL](https://github.com/nomic-ai/gpt4all?ref=producthunt) ([강화학습 방법](./models/GPT4ALL.md))
 1. [Vicuna 정리](./models/Vicuna.md)
 
 
