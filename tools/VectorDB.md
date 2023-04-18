@@ -33,9 +33,20 @@ Spectrogram을 사용한 (진동수별) 가시화를 통한 변형
 
 # Similarity
 
-ML에서 주로 사용되는 거리 측정방법으로는 Euclidean, Manhattan, Cosine, Chebyshev가 있다.
+개체를 비교하기 위해서는 개체를 비교가능하도록 숫자로 변환하는 과정과, 숫자간의 유사도를 검사하는 과정이 필요하며, 이를 위해서 Vector라는 단위를 사용한다.
 
-![img](https://d33wubrfki0l68.cloudfront.net/05ba039181d2fb699d30257790c4b731e14de9ef/6db99/images/what-is-similarity-search-distance-metrics.jpeg)<img width=200, height=200/>
+Vector간의 유사도계산 과정을 '유사도 검색' 또는 'Vector 검색' 이라 부르며, Vector사이의 유사도는 다차원 공간에서 Vector간의 거리에 반비례한다.
+
+Vector간의 거리계산을 위해 ML에서 사용되는 주요 측정방법(Metric)으로는 Euclidean, Manhattan, Cosine, Chebyshev가 있다.
+
+<img src=https://d33wubrfki0l68.cloudfront.net/05ba039181d2fb699d30257790c4b731e14de9ef/6db99/images/what-is-similarity-search-distance-metrics.jpeg width=650 height=600/>
+
+### K Nearest Neighbors (k-NN)
+
+k-NN은 질의 벡터가 주어졌을때, 한 공간에서 가장 근접한 벡터를 찾는 알고리즘이다.
+
+k-NN은 데이터베이스내 모든 벡터에 대해서 거리를 계산하는 과정이 필요하다는 단점을 가지기에, 대체방안으로 ANN(Approximately Nearest Neighbors)이 사용될 수도 있다.
+
 
 # 관련자료
 - [벡터 검색의 종류와 활용도](https://www.itworld.co.kr/tags/18955/ai/209202)
