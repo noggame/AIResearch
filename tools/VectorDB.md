@@ -10,18 +10,24 @@ Vector 검색은 사용자가 저장된 개체애 대한
 
 목적 : 상호 비교/연산이 가능하도록 숫자 혹은 Vector 정보로 표현 
 
-## Text Model
+
+## Embedding Model
+
+### Text embedding
 
 - Word2Vec
 - GLoVE
 - BERT
+- USE
 
 
-## Image Model
+### Image embedding
 
-CNNs (Convolutional Neural Networks) (VGG, Inception 포함)
+- CNNs (Convolutional Neural Networks)
+- VGG
+- Inception
 
-## Audio
+### Audio embedding
 
 Spectrogram을 사용한 (진동수별) 가시화를 통한 변형
 
