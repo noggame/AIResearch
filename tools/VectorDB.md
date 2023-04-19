@@ -50,6 +50,7 @@ Index로는 검색 속도, 품질, 메모리 등을 고려할 수 있으며, Fai
 #### 기법
 
 1. Flat : 벡터에 변형을 가핮 않고 그대로 사용하며, 전체 벡터를 대상으로 검색하여 정확도는 높지만 속도가 느리다.
+
 ```Python
 d = 128  # dimensionality of Sift1M data
 k = 10  # number of nearest neighbors to return
@@ -58,7 +59,9 @@ index = faiss.IndexFlatIP(d)    # Inner Product distance 사용 (Euclidean/L2 �
 index.add(data)
 D, I = index.search(xq, k)
 ```
-2. LSH (Locality Sensitive Hashing) : 해싱(Hashing)이 가능한 충돌할 수 있도록 하는 해시 함수를 통해 각 벡터를 bucket 단위로 그룹화해두고 검색 과정에서 key값만으로 바로 찾을 수 있도록 하는 방법이다.
+
+2. LSH (Locality Sensitive Hashing) : 해싱(Hashing)이 가능한 충돌할 수 있도록 하는 해시 함수를 통해 각 벡터를 bucket 단위로 그룹화해두고 검색 과정에서 key값만으로 바로 찾을 수 있도록 하는 방법이다. 단, 고차원이나 데이터가 많은 경우에는 메모리 및 검색 비용이 크기때문에 적합하지 않다.
+
 ``` Python
 nbits = d*4  # resolution of bucketed vectors
 
@@ -70,6 +73,27 @@ index.add(wb)
 D, I = index.search(xq, k)
 ```
 
+3. HNSW (Hierarchical Navigable Small World) : NSW 그래프를 여러 계층으로 분할하는 방식이며, 상위 계층으로 갈수록 노드(Vertex)간의 중간 연결이 제거된 구조이다.
+
+<img src=https://d33wubrfki0l68.cloudfront.net/1fcaebe70c031d408ae082da355bfe0c6ecc04ac/ba768/images/similarity-search-indexes16.jpg width=400 height=300/>
+
+``` Python
+# set HNSW index parameters
+M = 64  # number of connections each vertex will have
+ef_search = 32  # depth of layers explored during search
+ef_construction = 64  # depth of layers explored during index construction
+
+# initialize index (d == 128)
+index = faiss.IndexHNSWFlat(d, M)
+# set efConstruction and efSearch parameters
+index.hnsw.efConstruction = ef_construction
+index.hnsw.efSearch = ef_search
+# add data to index
+index.add(wb)
+
+# search as usual
+D, I = index.search(wb, k)
+```
 
 
 
