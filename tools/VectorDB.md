@@ -22,7 +22,7 @@ Vector 검색은 사용자가 저장된 개체애 대한
 
 Vector간의 유사도계산 과정을 '유사도 검색' 또는 'Vector 검색' 이라 부르며, Vector사이의 유사도는 다차원 공간에서 Vector간의 거리에 반비례한다.
 
-Vector간의 거리계산을 위해 ML에서 사용되는 주요 측정방법(Metric)으로는 Euclidean, Manhattan, Cosine, Chebyshev가 있다.
+Vector간의 거리계산을 위해 ML에서 사용되는 주요 측정방법(Metric)으로는 Euclidean(L2), Manhattan, Cosine, Chebyshev가 있다.
 
 <img src=https://d33wubrfki0l68.cloudfront.net/05ba039181d2fb699d30257790c4b731e14de9ef/6db99/images/what-is-similarity-search-distance-metrics.jpeg width=650 height=600/>
 
@@ -41,6 +41,36 @@ Vector간의 거리계산을 위해 ML에서 사용되는 주요 측정방법(Me
 
 벡터 데이터베이스에서는 이러한 분류를 metadata 조건으로 기술하고, 이를 기반으로 검색의 범주를 제한하는 방법을 사용한다.
 
+### Index
+
+정적 혹은 기계학습으로부터 원본 데이터의 정보를 유용하고 의미있게 인코딩한 벡터 만들수 있으며,이러한 의미있는 벡터는 보다 효율적인 유사도 검색을 위해 인덱스라는 데이터로 정의해 사용한다.
+
+Index로는 검색 속도, 품질, 메모리 등을 고려할 수 있으며, Faiss(Facebook AI Similarity Search)에서처럼 여러 Index를 다층구조로 정의해 사용할 수도 있다.
+
+#### 기법
+
+1. Flat : 벡터에 변형을 가핮 않고 그대로 사용하며, 전체 벡터를 대상으로 검색하여 정확도는 높지만 속도가 느리다.
+```Python
+d = 128  # dimensionality of Sift1M data
+k = 10  # number of nearest neighbors to return
+
+index = faiss.IndexFlatIP(d)    # Inner Product distance 사용 (Euclidean/L2 거리는 IndexFlatL2 method 사용)
+index.add(data)
+D, I = index.search(xq, k)
+```
+2. LSH (Locality Sensitive Hashing) : 해싱(Hashing)이 가능한 충돌할 수 있도록 하는 해시 함수를 통해 각 벡터를 bucket 단위로 그룹화해두고 검색 과정에서 key값만으로 바로 찾을 수 있도록 하는 방법이다.
+``` Python
+nbits = d*4  # resolution of bucketed vectors
+
+# initialize index and add vectors
+index = faiss.IndexLSH(d, nbits)
+index.add(wb)
+
+# and search
+D, I = index.search(xq, k)
+```
+
+
 
 
 # 관련자료
@@ -48,4 +78,5 @@ Vector간의 거리계산을 위해 ML에서 사용되는 주요 측정방법(Me
 - [Vector Database](https://www.pinecone.io/learn/vector-database/)
 - [Vector Embedding](https://www.pinecone.io/learn/vector-embeddings/)
 - [Similarity Search](https://www.pinecone.io/learn/what-is-similarity-search/)
+- [Vector Indexes](https://www.pinecone.io/learn/vector-indexes/)
 
