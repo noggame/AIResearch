@@ -75,7 +75,7 @@ D, I = index.search(xq, k)
 
 3. HNSW (Hierarchical Navigable Small World) : NSW 그래프를 여러 계층으로 분할하는 방식이며, 상위 계층으로 갈수록 노드(Vertex)간의 중간 연결이 제거된 구조이다.
 
-<img src=https://d33wubrfki0l68.cloudfront.net/1fcaebe70c031d408ae082da355bfe0c6ecc04ac/ba768/images/similarity-search-indexes16.jpg width=400 height=300/>
+<img src=https://d33wubrfki0l68.cloudfront.net/1fcaebe70c031d408ae082da355bfe0c6ecc04ac/ba768/images/similarity-search-indexes16.jpg width=500 height=350/>
 
 ``` Python
 # set HNSW index parameters
@@ -95,6 +95,23 @@ index.add(wb)
 D, I = index.search(wb, k)
 ```
 
+4. IVF (Inverted File Index) : 클러스터링을 통한 검색 범위를 축소하고, 클러스터링을 위해 Voronoi Diagram(Dirichlet tessellation)의 개념을 사용한다.
+
+<img src=https://d33wubrfki0l68.cloudfront.net/c384231ba57345064a94e95b5a53c4ea3b79a3e4/d2aa9/images/similarity-search-indexes22.jpg width=500 height=350/>
+
+<img src=https://d33wubrfki0l68.cloudfront.net/ef65dd6a83e8fa8ddb25e0000b7e2e53678e75e1/303f9/images/similarity-search-indexes26.png width=500 height=350/>
+
+``` Python
+nlist = 128  # number of cells/clusters to partition data into
+
+quantizer = faiss.IndexFlatIP(d)  # how the vectors will be stored/compared
+index = faiss.IndexIVFFlat(quantizer, d, nlist)   # nlist=생성할 cell(probe)의 수
+index.train(data)  # we must train the index to cluster into cells
+index.add(data)
+
+index.nprobe = 8  # set how many of nearest cells to search
+D, I = index.search(xq, k)
+```
 
 
 # 관련자료
