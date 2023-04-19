@@ -35,6 +35,14 @@ Vector간의 거리계산을 위해 ML에서 사용되는 주요 측정방법(Me
 > k-NN은 데이터베이스내 모든 벡터에 대해서 거리를 계산하는 과정이 필요하다는 단점을 가지기에, 대체방안으로 ANN(Approximately Nearest Neighbors)이 사용될 수도 있다.
 
 
+### Filtering
+
+검색으로 찾은 개체들 중 일치도가 높더라도 실제 원하는 결과가 아니 수 있다. 따라서 필터링은 질의에대한 의미를 파악하고 의미에 적합한 분류를 정의해 의도에 맞는 분류의 개체만 간추려 볼 수 있도록 한다.
+
+벡터 데이터베이스에서는 이러한 분류를 metadata 조건으로 기술하고, 이를 기반으로 검색의 범주를 제한하는 방법을 사용한다.
+
+
+
 # 관련자료
 - [벡터 검색의 종류와 활용도](https://www.itworld.co.kr/tags/18955/ai/209202)
 - [Vector Database](https://www.pinecone.io/learn/vector-database/)
