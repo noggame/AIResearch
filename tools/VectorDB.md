@@ -1,8 +1,7 @@
 
 # Vertor Database
 
-[Vector](ai_research/concept/data/vector.md) 검색은 사용자가 저장된 개체애 대한 
-
+[Vector](/ai_research/concept/data/vector.md) 검색은 사용자가 저장된 개체애 대한 
 
 
 
