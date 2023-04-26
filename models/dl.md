@@ -17,3 +17,4 @@
 
 ## Neural Network Language Model (NNLM)
 
+<img href=https://wikidocs.net/images/page/45609/nnlm3_renew.PNG widh=300 height=200/>
