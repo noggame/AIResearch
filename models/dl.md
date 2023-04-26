@@ -19,11 +19,11 @@
 
 <img src=https://wikidocs.net/images/page/45609/nnlm5_final.PNG widh=400 height=250/>
 
-Projection Layer : 정의된 윈도우 크기를 따라서 입력되는 one-hot vector로 변환된 word
+Projection Layer (투사층) : 정의된 윈도우 크기를 따라서 입력되는 one-hot vector로 변환된 word를 입력받고, 
 
-Hidden Layer
+Hidden Layer (은닉층) : 
 
-Output Layer
+Output Layer (출력층) : 
 
 
 # Reference
