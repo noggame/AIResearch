@@ -19,11 +19,20 @@
 
 <img src=https://wikidocs.net/images/page/45609/nnlm5_final.PNG widh=400 height=250/>
 
-Projection Layer (투사층) : 정의된 윈도우 크기를 따라서 입력되는 one-hot vector로 변환된 word를 입력받고, 
+Projection Layer (투사층) : 정의된 윈도우 크기를 따라서 입력층으로부터 one-hot vector로 변환된 word를 입력받고, lookup table을 기반으로 embedding word 목록은 합쳐서(concatenate) 은닉층으로 전달한다.
+> lookup table은 (투사층의 크기) * (one-hot vector의 차원) 의 크기를 가지는 가중치 행렬로, 학습 과정에서 값이 수정될 수 있다.
 
-Hidden Layer (은닉층) : 
+Hidden Layer (은닉층) : 투사층의 embedding vector를 입력받아 가중치를 곱하고 편향을 더한 값을 출력
 
-Output Layer (출력층) : 
+Output Layer (출력층) : 은닉층의 출력결과를 기반으로 다음에 나올 가능성이 높은 word 활성화
+> 상세설명 : y hat 출력은 one-hot vector가 나타내는 각 word가 다음에 나올 가능성을 0~1의 실수값으로 나타내며, 출력층에서는 해당 vector에 softmax 함수를 사용해 가능성이 가장 높은 word를 선별한다.
+
+장점 : 학습과정에서 유사한 목적으로 사용되는 단어들은 유사한 임베딩 값을 가지게되므로, 훈련되지 않은 문맥이라도 다음에 나올 수 있는 단어를 선택할 수 있다. (희소문제 해결)
+
+한계 : n-gram과 같은 윈도우닝을 기반으로 하고있어, 문맥 전체가 아닌 고정된 길이의 n개의 단어만을 참고해 예측할 수 있다.
+
+
+## RNN
 
 
 # Reference
