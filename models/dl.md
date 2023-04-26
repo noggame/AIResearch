@@ -17,4 +17,15 @@
 
 ## Neural Network Language Model (NNLM)
 
-<img url=https://wikidocs.net/images/page/45609/nnlm3_renew.PNG widh=300 height=200/>
+<img src=https://wikidocs.net/images/page/45609/nnlm5_final.PNG widh=400 height=250/>
+
+Projection Layer : 정의된 윈도우 크기를 따라서 입력되는 one-hot vector로 변환된 word
+
+Hidden Layer
+
+Output Layer
+
+
+# Reference
+
+[wikidocs01](https://wikidocs.net/45609)
