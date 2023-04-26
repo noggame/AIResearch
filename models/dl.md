@@ -1,5 +1,6 @@
+# 언어모델
 
-## N-gram 언어모델
+## N-gram
 
 어떤 문장의 연속된 n개의 word에서 n번째 나올 수 있는 word를 예측하는 모델이다. 학습은 "(n-1)번째 word까지 입력이 있으면 다음 word로는 n번째 word가 출력된다"라는 구성을 하나의 데이터셋으로 보고 진행되며, 예측은 그 빈도를 측정해 확률적으로 예측한다.
 
@@ -15,7 +16,7 @@
 한계 : `희소 문제 (sparsity problem)` - 학습되지 않은 데이터에 대해서는 예측이 불가능하다. (앞선 예시에서 "invariable mark of"와 일치하는 문장이 학습되지 않은 경우는 빈도수가 0이기 때문에 예측이 불가하다.)
 
 
-## Neural Network Language Model (NNLM)
+## NNLM (Neural Network Language Model)
 
 <img src=https://wikidocs.net/images/page/45609/nnlm5_final.PNG widh=400 height=250/>
 
@@ -29,10 +30,10 @@ Output Layer (출력층) : 은닉층의 출력결과를 기반으로 다음에 �
 
 장점 : 학습과정에서 유사한 목적으로 사용되는 단어들은 유사한 임베딩 값을 가지게되므로, 훈련되지 않은 문맥이라도 다음에 나올 수 있는 단어를 선택할 수 있다. (희소문제 해결)
 
-한계 : n-gram과 같은 윈도우닝을 기반으로 하고있어, 문맥 전체가 아닌 고정된 길이의 n개의 단어만을 참고해 예측할 수 있다.
+한계 : N-gram과 같은 윈도우닝을 기반으로 하고있어, 문맥 전체가 아닌 고정된 길이의 n개의 단어만을 참고해 예측할 수 있다.
 
 
-## RNN
+## RNN (Recurrent Neural Network Language Model)
 
 
 # Reference
