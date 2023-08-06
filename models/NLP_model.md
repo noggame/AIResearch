@@ -1,4 +1,3 @@
-# 언어모델
 
 ## N-gram
 
@@ -32,8 +31,45 @@ Output Layer (출력층) : 은닉층의 출력결과를 기반으로 다음에 �
 
 한계 : N-gram과 같은 윈도우닝을 기반으로 하고있어, 문맥 전체가 아닌 고정된 길이의 n개의 단어만을 참고해 예측할 수 있다.
 
-
 ## RNN (Recurrent Neural Network Language Model)
+
+입력된 값을 은닉층에서 처리하고 활성화 함수로부터 출력된 결과값을 출력층 뿐만 아니라 다시 은닉층으로 전달해 다음 계산에 활용하는 방식을 사용한다.
+> 단순히 출력값을 출력층으로 전달하는 방법은 Feed Forward Neural network 라고 부른다.
+
+
+## LSTM (Long Short-Term Memory)
+
+기존 RNN은 이전 정보다 다음 정보 처리를 위한 값으로 전달되는데, 처리 단계(time step)가 길어지면 앞선 정보의 양이 점점 희석되면서 중요한 정보라도 손실되는 경우가 있다. 이를 해결하기 위해 LSTM에서는 은닉층에 현재 정보와 상태값을 추가로 사용해 처리하는 방식을 사용한다.
+- 입력 게이트 : 현재 정보를 기억
+- 출력 게이트 : 현재 상태의 은닉 상태 결정, 현재 시점의 입력값(토큰)과 이전 시점의 은닉 상태에 대한 시그모이드 함수 값
+- 삭제 게이트 : 삭제 과정을 거친 정보의 양, 현재 시점의 입력값(토큰)과 이전 시점의 은닉 상태에 대한 시그모이드 함수 값
+- 셀 상태 : 이전 및 현재 정보를 얼마나 반영할지 결정
+
+
+## Seq2Seq (Sequence to Sequence)
+
+입력된 시퀀스로부터 다른 도메인의 시퀀스를 출력하는 방법을 인코더(Encoder), 디코더(Decoder) 및 RNN 을 사용해 구현한 모델
+
+단점 : 인코딩 결과는 고정된 크기의 context vector값으로 출력되어 디코더로 전달되기 때문에 정보손실 및 병목현상이 발생할 수 있다.
+
+## Attention
+
+Seq2Seq 모델을 기반으로, 디코더의 입력값으로 기존 context vector값과 함께 인코더의 각 입력값(토큰) 처리 결과 전체를 전달/처리하는 방법을 사용해 정보손실을 줄임
+
+
+## Transformer
+
+트랜스포머는 아래 3개의 주요 요소들을 통해 RNN을 대체할 수 있었다.
+
+1. Positional Encoding : 위치 기반으로 각 입력 embedding에 대한 다양한 활성화 사인파(sine wave)들을 추가해, NLP에서 RNNs를 사용함으로써 얻을 수 있는 sequence내 순서를 고려하는 능력을 대체
+2. Self-attention : Self-attention의 핵심은 문장(context/sentence/paragraph)에서 하나의 단어(word)와 이 외 모든 단어들에 사이에 attention 매커니즘을 적용했다는 점에 있다. (vanilla attention의 경우에는 인코더와 디코더 사이의 attention에만 초점을 두고있다.)
+3. Multi-head attention
+
+[참조](https://www.pinecone.io/learn/sentence-embeddings/)
+
+
+## BERT
+
 
 
 # Reference
