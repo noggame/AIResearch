@@ -48,27 +48,28 @@ Output Layer (출력층) : 은닉층의 출력결과를 기반으로 다음에 �
 
 ## Seq2Seq (Sequence to Sequence)
 
-입력된 시퀀스로부터 다른 도메인의 시퀀스를 출력하는 방법을 인코더(Encoder), 디코더(Decoder) 및 RNN 을 사용해 구현한 모델
+입력된 시퀀스로부터 다른 도메인의 시퀀스를 출력하는 방법으로 인코더(Encoder), 디코더(Decoder) 구조를 사용하고, 인코더와 디코더 내부는 RNN, CNN, LSTM 등의 기존 학습모델로 구성되어있다.
 
 단점 : 인코딩 결과는 고정된 크기의 context vector값으로 출력되어 디코더로 전달되기 때문에 정보손실 및 병목현상이 발생할 수 있다.
+> 정보손실의 경우 문장의 길이(sequence)가 길어지는 경우 학습 과정에서 미분이 반복되면서 앞서 입력된 단어의 정보가 소실되는 기울기 소실(gradient vanishing) 문제가 주요 원인이다.
 
 ## Attention
 
 Seq2Seq 모델을 기반으로, 디코더의 입력값으로 기존 context vector값과 함께 인코더의 각 입력값(토큰) 처리 결과 전체를 전달/처리하는 방법을 사용해 정보손실을 줄인 모델
-> 정보손실의 경우 문장의 길이(sequence)가 길어지는 경우 학습 과정에서 미분이 반복되면서 앞서 입력된 단어의 정보가 소실되는 기울기 소실(gradient vanishing) 문제가 주요 원인이다.
 
 디코딩 과정에서는 인코딩 과정의 각 입력값들 중 어느 입력값에 더 집중(attention)해서 처리해야하는지 에너지 및 가중치 값을 계산해 사용한다.
 
 
 ## Transformer
 
-트랜스포머는 아래 3개의 주요 요소들을 통해 RNN을 대체할 수 있었다.
+Attention 모델이 디코더에서 출력 생성에 집중했다면, Transformer에서는 self attention을 사용해 인코더와 디코더에서 모두 사용될 수 있는 방법을 제시하고 있다.
+또한, 기존 Neural Network 모델 대신 Query, Key, Value 값을 도입해 (병렬처리 등의) 처리 효율을 높인 구조(아키텍처)에 대해 설명한다.
+
+트랜스포머는 아래 3개의 주요 요소들을 통해 RNN을 대체할 수 있었다. - [참조](https://www.pinecone.io/learn/sentence-embeddings/)
 
 1. Positional Encoding : 위치 기반으로 각 입력 embedding에 대한 다양한 활성화 사인파(sine wave)들을 추가해, NLP에서 RNNs를 사용함으로써 얻을 수 있는 sequence내 순서를 고려하는 능력을 대체
 2. Self-attention : Self-attention의 핵심은 문장(context/sentence/paragraph)에서 하나의 단어(word)와 이 외 모든 단어들에 사이에 attention 매커니즘을 적용했다는 점에 있다. (vanilla attention의 경우에는 인코더와 디코더 사이의 attention에만 초점을 두고있다.)
 3. Multi-head attention
-
-[참조](https://www.pinecone.io/learn/sentence-embeddings/)
 
 
 ## BERT
