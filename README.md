@@ -26,7 +26,8 @@
 1. [Alpaca](https://github.com/alpacahq)
 1. [GPT4ALL](https://github.com/nomic-ai/gpt4all?ref=producthunt) ([강화학습 방법](./models/GPT4ALL.md))
 1. [Vicuna 정리](./models/Vicuna.md)
-
+1. [LlaMa2](https://ai.meta.com/llama/)
+1. [Mistral](https://mistral.ai/news/announcing-mistral-7b/)
 
 ## 적용 예
 
